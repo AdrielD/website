@@ -272,8 +272,5 @@ footer, footer > span {
   background-color: var(--neutral-dark);
   color: var(--neutral-light);
   padding: var(--base-spacing) 0;
-
-  & span {
-    padding: 0 8px;
-  }
+  gap: 8px;
 }

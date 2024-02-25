@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
   const setYears = () => {
     const el = document.getElementById('years');
     const years = currentYear - 2010;
-    el.innerHTML = years;
+    el.innerHTML = ` the last ${years} years`;
   }
 
   const setCopyrightYears = () => {
