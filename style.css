@@ -1,0 +1,279 @@
+/*
+  Themes and style tokens
+*/
+:root {
+  --cryo: #5CDEFF;
+  --cryo-light: #35535A;
+  --emerald: #8DB52F;
+  --crimson: #B52F2F;
+  --gold: #D0BC05;
+  --royal: #9F62ED;
+  --sakura: #C555D5;
+  --primary-color: var(--cryo);
+  --primary-color-light: var(--cryo-light);
+  --neutral-white: #fff;
+  --neutral-light: #999;
+  --neutral-dark: #222;
+  --base-font-family: 'Ubuntu', sans-serif;
+  --heading-font-family: 'Zen Dots', sans-serif;
+  --base-spacing: 32px;
+  --big-spacing: 64px;
+  --bigger-spacing: 128px;
+}
+
+/*
+  Resetting & basic styles 
+*/
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1.3rem;
+  font-family: var(--base-font-family);
+  color: var(--neutral-white);
+  font-weight: 400;
+  list-style: none;
+}
+
+body {
+  background-color: var(--neutral-dark);
+}
+
+body, div, nav, header, section, h2, h3, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+p {
+  text-align: left;
+}
+
+li {
+  padding: 12px 0;
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  .small& {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Technologies */
+.aws { background-image: url('./assets/aws.svg'); }
+.azure { background-image: url('./assets/azure.svg'); }
+.docker { background-image: url('./assets/docker.svg'); }
+.go { background-image: url('./assets/go.svg'); }
+.jenkins { background-image: url('./assets/jenkins.svg'); }
+.mongodb { background-image: url('./assets/mongodb.svg'); }
+.postgresql { background-image: url('./assets/postgresql.svg'); }
+.react { background-image: url('./assets/react.svg'); }
+.ruby { background-image: url('./assets/ruby.svg'); }
+.typescript { background-image: url('./assets/typescript.svg'); }
+
+/* Social */
+.linkedin { background-image: url('./assets/linkedin.svg'); }
+.github { background-image: url('./assets/github.svg'); }
+.email { background-image: url('./assets/email.svg'); }
+.website { background-image: url('./assets/website.svg'); }
+.go-to-site { background-image: url('./assets/go-to-site.svg'); }
+
+.row {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  &.compact {
+    gap: 16px;
+  }
+}
+
+.spaced-around {
+  justify-content: space-around;
+}
+
+.column {
+  flex-direction: column;
+  gap: var(--base-spacing);
+}
+
+.to-right {
+  text-align: right;
+  justify-content: end;
+}
+
+.to-left {
+  text-align: left;
+  justify-content: start;
+}
+
+.to-center {
+  text-align: center;
+  justify-content: center;
+}
+
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.box-highlight {
+  padding: var(--base-spacing);
+  background-color: var(--primary-color-light);
+  margin-left: 50px;
+}
+
+.section {
+  padding: var(--big-spacing) 0;
+  max-width: 1200px;
+}
+
+.flag {
+  background-color: var(--primary-color);
+  color: var(--neutral-dark);
+  width: 120px;
+  height: 40px;
+  clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%, 20% 50%, 0% 0%);
+}
+
+.detail-text {
+  font-size: 1rem;
+  color: var(--neutral-light);
+}
+
+/*
+  Page sections
+*/
+#page {
+  background: url('./assets/blackice.jpg');
+  background-size: 100%;
+  background-repeat: round;
+  flex-direction: column;
+}
+
+#navigation {
+  padding: var(--base-spacing) 0;
+  justify-content: space-between;
+  max-width: 1200px;
+
+  & a {
+    font-size: 1.5rem;
+  }
+}
+
+#cover-heading {
+  background-color: var(--neutral-dark);
+  padding: var(--bigger-spacing) 0;
+
+  & span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  & #name {
+    font-family: var(--heading-font-family);
+    font-size: 4rem;
+    color: var(--primary-color);
+    letter-spacing: 0.5rem;
+  }
+}
+
+.sub-heading {
+  column-gap: var(--base-spacing);
+
+  & span {
+    font-family: var(--heading-font-family);
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  & hr {
+    background-color: var(--neutral-white);
+    width: 100%;
+    height: 2px;
+  }
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--neutral-dark);
+  font-weight: 700;
+  padding: 16px 32px;
+
+  &:hover {
+    color: var(--neutral-dark);
+    background-color: var(--neutral-white);
+  }
+}
+
+.tech {
+  max-width: 200px;
+
+  & h3 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
+#working-on {
+  padding: var(--big-spacing) 0;
+  width: 100%;
+  background-color: var(--neutral-dark);
+
+  & #techs {
+    max-width: 1200px;
+    padding: var(--big-spacing) 0;
+  }
+
+  & h3 {
+    font-size: 2rem;
+  }
+}
+#timeline {
+  align-items: start;
+}
+
+.company-name {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.career {
+  max-width: 1100px;
+  margin-left: 50px;
+  border-left: 4px solid var(--neutral-white);
+  padding-left: 86px;
+  padding-bottom: var(--big-spacing);
+}
+
+.visit-website {
+  font-size: 0.8rem;
+  color: var(--neutral-white);
+  text-decoration: underline;
+}
+
+footer, footer > span {
+  background-color: var(--neutral-dark);
+  color: var(--neutral-light);
+  padding: var(--base-spacing) 0;
+
+  & span {
+    padding: 0 8px;
+  }
+}
