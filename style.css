@@ -27,7 +27,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: var(--base-font-family);
   color: var(--neutral-white);
   font-weight: 400;
@@ -140,7 +140,7 @@ li {
 
 .section {
   padding: var(--big-spacing) 0;
-  max-width: 1200px;
+  max-width: 900px;
 }
 
 .flag {
@@ -169,7 +169,7 @@ li {
 #navigation {
   padding: var(--base-spacing) 0;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 900px;
 
   & a {
     font-size: 1.5rem;
@@ -237,7 +237,7 @@ li {
   background-color: var(--neutral-dark);
 
   & #techs {
-    max-width: 1200px;
+    max-width: 900px;
     padding: var(--big-spacing) 0;
   }
 
