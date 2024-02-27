@@ -58,20 +58,9 @@ p {
   text-align: left;
 }
 
-li {
-  padding: 12px 0;
-}
-
 .icon {
-  width: 72px;
-  height: 72px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-
-  .small& {
-    width: 32px;
-    height: 32px;
-  }
+  font-size: 2rem;
+  color: var(--primary-color);
 }
 
 /* Technologies */
@@ -101,6 +90,10 @@ li {
   &.compact {
     gap: 16px;
   }
+}
+
+.pad-sides {
+  padding: 0 var(--base-spacing);
 }
 
 .spaced-around {
@@ -133,21 +126,32 @@ li {
 }
 
 .box-highlight {
-  padding: var(--base-spacing);
+  flex-direction: column;
+  gap: var(--base-spacing);
+  align-items: start;
+  padding: var(--base-spacing) 0;
   background-color: var(--primary-color-light);
-  margin-left: 50px;
+
+  & p{
+    padding: 0 var(--base-spacing);
+  }
 }
 
 .section {
   padding: var(--big-spacing) 0;
   max-width: 900px;
+
+  & p {
+    padding: 0 var(--base-spacing);
+  }
 }
 
 .flag {
+  margin-left: var(--base-spacing);
   background-color: var(--primary-color);
   color: var(--neutral-dark);
-  width: 120px;
-  height: 40px;
+  width: 100px;
+  height: 30px;
   clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%, 20% 50%, 0% 0%);
 }
 
@@ -173,12 +177,23 @@ li {
 
   & a {
     font-size: 1.5rem;
+    padding: 0 var(--base-spacing);
   }
 }
 
 #cover-heading {
   background-color: var(--neutral-dark);
   padding: var(--bigger-spacing) 0;
+
+  & h1 {
+    padding: 0 var(--base-spacing);
+
+    @media (width <= 650px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   & span {
     display: block;
@@ -223,7 +238,8 @@ li {
 }
 
 .tech {
-  max-width: 200px;
+  max-width: 100px;
+  padding: 0 var(--base-spacing);
 
   & h3 {
     font-size: 2rem;
@@ -255,11 +271,17 @@ li {
 }
 
 .career {
-  max-width: 1100px;
-  margin-left: 50px;
-  border-left: 4px solid var(--neutral-white);
-  padding-left: 86px;
+  max-width: 900px;
+  /* margin-left: 50px; */
+  /* border-left: 4px solid var(--neutral-white); */
+  /* padding-left: 86px; */
   padding-bottom: var(--big-spacing);
+}
+
+.vertical-separator {
+  content: '';
+  width: 2px;
+  height: 100%;
 }
 
 .visit-website {
@@ -268,9 +290,13 @@ li {
   text-decoration: underline;
 }
 
-footer, footer > span {
+footer {
   background-color: var(--neutral-dark);
   color: var(--neutral-light);
   padding: var(--base-spacing) 0;
   gap: 8px;
+
+  & span {
+    color: var(--neutral-light);
+  }
 }
