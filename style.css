@@ -257,8 +257,9 @@ p {
     padding: var(--big-spacing) 0;
   }
 
-  & h3 {
+  & span {
     font-size: 2rem;
+    padding: 0 var(--base-spacing);
   }
 }
 #timeline {
